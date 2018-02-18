@@ -1,8 +1,9 @@
 'use strict';
 
-module.exports = function(bitmapObj){
+crossSection = module.exports = function(bitmapObj, callback){
+  if(err) return callback(err);
   let middleX = Math.floor(bitmapObj.width/2);
-  console.log('pixel array length', bitmapObj.pixelArray.length);
+  // console.log('pixel array length', bitmapObj.pixelArray.length);
   for(var i = middleX; i < bitmapObj.pixelArray.length; i += bitmapObj.width){
     bitmapObj.pixelArray[i] = '1c';
     bitmapObj.pixelArray[i+1] = '1c';

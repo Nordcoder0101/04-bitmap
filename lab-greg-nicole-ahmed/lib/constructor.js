@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(data) {
+module.exports = function(data, callback) {
   function Bitmap (data) {
     this.size = data.readInt32LE(34);
     this.width = data.readInt32LE(18);
@@ -14,5 +14,6 @@ module.exports = function(data) {
     this.end = data.slice(this.pixelAddress + this.size, data.length).toString('hex');
   }
 
+  // callback(null, data);
   return new Bitmap(data);
 };
