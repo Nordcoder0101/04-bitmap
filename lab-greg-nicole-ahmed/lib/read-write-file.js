@@ -1,13 +1,13 @@
 'use strict';
 
 const constructor = require('./constructor.js');
-const allwhite = require('./all-black.js');
+const crossSection = require('./cross-section.js');
 const fs = require('fs');
 const path = require('path');
 
 
 const readFileHelper = module.exports = function(file, newFile, callback) {
-  let filePathRead = path.join(__dirname, '..', 'data', file);
+  let filePathRead = path.join(`${__dirname}`, '..', 'data', `${file}`);
 
   // console.log('path to read from', filePathRead);
   

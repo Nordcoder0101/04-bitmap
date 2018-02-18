@@ -15,4 +15,4 @@ module.exports = function(data) {
   }
 
   return new Bitmap(data);
-}
+};

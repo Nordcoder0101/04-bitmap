@@ -2,8 +2,8 @@
 
 const fileReader = require('./lib/read-write-file.js');
 const allwhite = require('./lib/all-black.js');
-const blueStripe = require('./lib/blue-stripe.js');
+const crossSection = require('./lib/cross-section.js');
 
 
 fileReader('palette-bitmap.bmp', 'new.bmp', allwhite);
-fileReader('palette-bitmap.bmp', 'blueStripe.bmp',blueStripe);
+fileReader('palette-bitmap.bmp', 'cross-section.bmp', crossSection);
