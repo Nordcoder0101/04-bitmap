@@ -1,6 +1,6 @@
 'use strict';
 
-crossSection = module.exports = function(bitmapObj, callback){
+module.exports = function(bitmapObj, callback){
   if(err) return callback(err);
   let middleX = Math.floor(bitmapObj.width/2);
   // console.log('pixel array length', bitmapObj.pixelArray.length);

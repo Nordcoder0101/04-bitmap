@@ -15,17 +15,20 @@ const readWriteFileHelper = module.exports = function(file, newFile, callback) {
     
     let bitMap = constructor(data);
     
-    let newBitmapObj = callback(bitMap);
+    callback(null, bitMap);
     
-    let newBitmapTotal = bitMap.header + newBitmapObj.colorPalette + newBitmapObj.colorString + bitMap.end;
-    let newBitmap = Buffer.from(newBitmapTotal, 'hex');
+    // let newBitmapObj = callback(null, bitMap);
+    
+    // let newBitmapTotal = bitMap.header + newBitmapObj.colorPalette + newBitmapObj.colorString + bitMap.end;
+    // let newBitmap = Buffer.from(newBitmapTotal, 'hex');
 
-     
-    fs.writeFile(filePathWrite, newBitmap, 'hex', function(err, data){
-      if (err) return callback(err);
+         
+    // fs.writeFile(filePathWrite, newBitmap, 'hex', function(err, data){
+    //   if (err) return callback(err);
+      
 
-      return callback(null, data);
+    //   callback(null, data);
 
-    });
   });
+  
 };
