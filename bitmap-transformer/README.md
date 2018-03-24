@@ -2,7 +2,25 @@
 
 ### Description
 
-In these files we created a bitmap (.bmp) transformer which reads the bitmap from the disc, runs one or more raster or color transforms and writes it out to a new file.
+In this application we create a bitmap (.bmp) transformer which reads the bitmap from the disc, runs one or more raster or color transforms and writes it out to a new file.
+
+For this application, we created 4 specific bitmap transformations.
+* cross.js - after running this transformation, the selected bitmap will have a cross and an X running through the middle of the image.
+* darken.js - this transformation darkens all the colors in the image slightly but does not change the order of pixels.
+* random.js - the pixels in the bitmap are rearranged in a random order.
+* all-white.js - the image is turned compltely white.
+
+#### index.js
+
+This is the entry point for our application. In this file, we call the read-write-file.js, passing it the file path for the image you would like to transform, followed by the file path that you would like the new image to be written to, with a callback function as the third parameter which is the transformation that you would like to happen.
+
+In order to run this application, make sure you have at least one transformation in index.js, then in your terminal run:
+
+```
+node index.js
+```
+
+The application will then read the bitmap file, apply the selected transformation, and write the new bitmap file to the data/ folder within the root/ folder.
 
 #### constructor.js
 
@@ -26,10 +44,6 @@ This function accepts one parameter, the bitmap object that was created. The cod
 
 This function accepts one parameter, the bitmap object that was created. The code then takes each color in the color palette array and maps it to a new value. It does this by breaking the string data up into chunks of 2 to find the decimal value of each hex value, reduce it by 40, and then turned back in to a hex value so it can inserted back into a string and because each hex value is lower, each color will be lower. The pixel array goes untouched and inserted back into the bitmap object.
 
-#### neww.js
+#### random.js
 
 This function accepts one parameter, the bitmap object that was created. The code then takes every item in the pixel array and and randomizes the indexes that the items in the pixel array point to in order to create a random image from the colors in the color palette.
-
-#### index.js
-
-This file requires in all the files that contain all the helper functions and then uses them to create 4 new images.

@@ -19,9 +19,9 @@ module.exports = function(bitmapObj) {
     }
     let hexString = colorArr.join('');
     return hexString;
-  })
+  });
 
   console.log(newPalette);
 
-  return {colorString: bitmapObj.pixelArray.join(''), colorPalette: newPalette.join('')}
-}
+  return {colorString: bitmapObj.pixelArray.join(''), colorPalette: newPalette.join('')};
+};

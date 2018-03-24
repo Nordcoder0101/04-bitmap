@@ -14,4 +14,4 @@ module.exports = function(bitmapObj) {
   }
 
   return {colorString: colorString, colorPalette: colorPalette};
-}
+};

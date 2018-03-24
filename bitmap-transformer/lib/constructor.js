@@ -1,7 +1,7 @@
 'use strict';
 
-module.exports = function(data) {
-  function Bitmap (data) {
+module.exports = function (data) {
+  function Bitmap(data) {
     this.size = data.readInt32LE(34);
     this.width = data.readInt32LE(18);
     this.height = data.readInt32LE(22);
@@ -15,4 +15,4 @@ module.exports = function(data) {
   }
 
   return new Bitmap(data);
-}
+};
